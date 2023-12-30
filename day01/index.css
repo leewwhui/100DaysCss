@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to top right, #43389f, #4ec6ca);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  position: relative;
+  height: 100px;
+  width: 200px;
+}
+
+.number > div {
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+
+.zero {
+  position: absolute;
+  top: 0px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 24px solid #fff;
+}
+
+.one-one {
+  z-index: 1;
+  background-color: white;
+  position: absolute;
+  transform: rotate(50deg);
+  width: 20px;
+  height: 40px;
+  left: -16px;
+  border-radius: 3px;
+}
+
+.one-two {
+  z-index: 3;
+  background-color: white;
+  position: absolute;
+  width: 24px;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.zero-one {
+  z-index: 2;
+  left: 17px;
+}
+
+.zero-two {
+  left: 100px;
+}
+
+/* ============================================================================================================================== */
+
+.big,
+.small {
+  text-transform: uppercase;
+  font-family: "Courier New", "Courier", sans-serif;
+  color: white;
+  font-weight: 700;
+}
+
+.big {
+  font-size: 82px;
+  line-height: 70px;
+}
+
+.small {
+  font-size: 23px;
+  letter-spacing: 0.04em;
+}
