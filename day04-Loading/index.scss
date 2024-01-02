@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$dot-base-size: 30px;
+
+@function dotAnimate($name) {
+  @return $name 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  background-color: #e56362;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.dot {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.dot-small {
+  width: $dot-base-size;
+  height: $dot-base-size;
+  z-index: 3;
+  animation: dotAnimate(dot-small-animation);
+}
+
+.dot-middle {
+  width: $dot-base-size * 2;
+  height: $dot-base-size * 2;
+  z-index: 2;
+  animation: dotAnimate(dot-middle-animation);
+}
+
+.dot-large {
+  width: $dot-base-size * 3;
+  height: $dot-base-size * 3;
+  z-index: 1;
+  animation: dotAnimate(dot-large-animation);
+}
+
+// ========================================= animation =========================================
+
+@keyframes dot-small-animation {
+  0%, 70% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes dot-middle-animation {
+  0%, 40% {
+    transform: translate(-50%, -50%) scale(0);
+  } 
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes dot-large-animation {
+  0%, 10% {
+    transform: translate(-50%, -50%) scale(0);
+  }  
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
