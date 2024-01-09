@@ -1,0 +1,85 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #bdcedb;
+}
+
+.cb {
+  display: none;
+
+  &:checked {
+    & ~ .button {
+      transform: translate(-50%, -50%) rotateX(180deg);
+      box-shadow: 4px -8px 12px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.button {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%) rotateX(0deg);
+  cursor: pointer;
+  user-select: none;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-in-out;
+  border-radius: 25px;
+  box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.1);
+
+  span {
+    border-radius: 25px;
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.front {
+  z-index: 2;
+  color: #34495e;
+  background-color: #fff;
+  backface-visibility: hidden;
+}
+
+.back {
+  z-index: 1;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #63c760;
+  transform: rotateX(180deg);
+}
