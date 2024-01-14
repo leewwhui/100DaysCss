@@ -1,0 +1,81 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    to right top,
+    #fff,
+    #fff 16px,
+    #000 16px,
+    #000 19px
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  background-color: #363636;
+  box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.polygon {
+  position: absolute;
+  width: 160px;
+  height: 140px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .light {
+    fill: #eee;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .middle {
+    fill: #ccc;
+    transition: all 0.5s ease-in-out;
+  }
+  .dark {
+    fill: #aaa;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover {
+    .light {
+      fill: #aaa;
+    }
+    .middle {
+      fill: #eee;
+    }
+    .dark {
+      fill: #ccc;
+    }
+  }
+}
