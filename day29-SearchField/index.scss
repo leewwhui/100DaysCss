@@ -1,0 +1,121 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #5ba4ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  width: 260px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  box-sizing: border-box;
+
+  input {
+    -webkit-appearance: none;
+    padding: 0 0 0 15px;
+    border: none;
+    width: 205px;
+    height: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    background: #fff;
+    color: #4d8dcb;
+  }
+
+  button {
+    flex: 1;
+    -webkit-appearance: none;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+    color: #5ca4ea;
+    font-size: 20px;
+    padding: 0;
+  }
+}
+
+.search-results {
+  position: absolute;
+  border-top: 1px solid #5ba4ea;
+  background-color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 0 15px;
+  width: 260px;
+  box-sizing: border-box;
+  margin: 0;
+  left: 0;
+  top: 40px;
+
+  div {
+    margin-top: 18px;
+    user-select: none;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: #5ba4ea;
+    }
+  }
+}
+
+*:focus {
+  outline: none;
+}
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #a4b9ce;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #a4b9ce;
+  opacity: 1;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #a4b9ce;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #a4b9ce;
+}
+:placeholder-shown {
+  /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color: #a4b9ce;
+}
